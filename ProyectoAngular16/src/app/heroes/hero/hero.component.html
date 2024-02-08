@@ -1,0 +1,36 @@
+<p>PRUEBA </p>
+<h1>Componente hero</h1>
+
+<dl>
+    <dt>NOMBRE</dt>
+    <dd>{{nombre}}</dd>
+
+    <dt>EDAD</dt>
+    <dd>{{edad}}</dd>
+
+    <dt>METODO</dt>
+    <dd>{{dameDescripcion()}}</dd>
+
+    <dt>EN MAYUSCULAS</dt>
+    <dd>{{nombreMayusculas}}</dd>
+
+    <input type="button"
+    *ngIf="nombre === 'ironman'"
+    value = "CambiarNombre" 
+    class="btn btn-primary mx-2"
+    (click)="CambiarNombre()">
+
+    <input type="button"
+    *ngIf="edad === 45"
+    value = "CambiarEdad" 
+    class="btn btn-primary mx-2"
+    (click)="CambiarEdad()">
+
+    <input type="button"
+    value = "Reset" 
+    class="btn btn-primary mx-2"
+    (click)="Reset()">
+
+
+
+</dl>

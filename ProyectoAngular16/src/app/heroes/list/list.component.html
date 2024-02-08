@@ -1,0 +1,20 @@
+<h1>¡Personajes!</h1>
+
+    <input type="button"
+    value = "BorrarPersonaje" 
+    class="btn btn-primary mx-2"
+    (click)="eliminarPersonaje()">
+
+    <input type="button"
+    value = "BorrarPersonaje" 
+    class="btn btn-primary mx-2"
+    (click)="eliminarPersonaje()">
+<ul class="list-group mt-2">
+    <li *ngFor="let hero of heroNames" class="list-group-item">
+
+        {{hero}}
+
+    </li>
+
+
+</ul>
