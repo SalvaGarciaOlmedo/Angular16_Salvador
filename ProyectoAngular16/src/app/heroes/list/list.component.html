@@ -1,20 +1,26 @@
 <h1>¡Personajes!</h1>
 
-    <input type="button"
-    value = "BorrarPersonaje" 
-    class="btn btn-primary mx-2"
-    (click)="eliminarPersonaje()">
+   <p *ngIf ="heroeBorradoMostrar else ningunheroeborrado">
+
+    heroe borrado {{heroeBorradoMostrar}}
+
+   </p>
+
+   <ng-template #ningunheroeborrado>
+    <p>no se ha borrado nada</p>
+   </ng-template>
 
     <input type="button"
     value = "BorrarPersonaje" 
     class="btn btn-primary mx-2"
     (click)="eliminarPersonaje()">
-<ul class="list-group mt-2">
-    <li *ngFor="let hero of heroNames" class="list-group-item">
 
-        {{hero}}
+    <ul class="list-group mt-2">
+        <li *ngFor="let hero of heroNames" class="list-group-item">
 
-    </li>
+            {{hero}}
+
+        </li>
 
 
-</ul>
+    </ul>
